@@ -183,26 +183,28 @@ export interface BottomSheetProps
   /**
    * View style to be applied to the background component.
    *
-   * @type ViewStyle
+   * @type Animated.AnimateStyle<ViewStyle>
    * @default undefined
    */
   backgroundStyle?: StyleProp<
-    Omit<ViewStyle, 'position' | 'top' | 'left' | 'bottom' | 'right'>
+    Animated.AnimateStyle<
+      Omit<ViewStyle, 'position' | 'top' | 'left' | 'bottom' | 'right'>
+    >
   >;
   /**
    * View style to be applied to the handle component.
    *
-   * @type ViewStyle
+   * @type Animated.AnimateStyle<ViewStyle>
    * @default undefined
    */
-  handleStyle?: StyleProp<ViewStyle>;
+  handleStyle?: StyleProp<Animated.AnimateStyle<Omit<ViewStyle>>>;
   /**
    * View style to be applied to the handle indicator component.
    *
-   * @type ViewStyle
+   * @type Animated.AnimateStyle<ViewStyle>
    * @default undefined
    */
-  handleIndicatorStyle?: StyleProp<ViewStyle>;
+  handleIndicatorStyle?: StyleProp<Animated.AnimateStyle<Omit<ViewStyle>>>;
   /**
    * Custom hook to provide pan gesture events handler, which will allow advance and
    * customize handling for pan gesture.

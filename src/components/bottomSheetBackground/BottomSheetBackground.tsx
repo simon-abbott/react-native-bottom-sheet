@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View } from 'react-native';
+import Animated from 'react-native-reanimated';
 import type { BottomSheetBackgroundProps } from './types';
 import { styles } from './styles';
 
@@ -7,7 +7,7 @@ const BottomSheetBackgroundComponent = ({
   pointerEvents,
   style,
 }: BottomSheetBackgroundProps) => (
-  <View
+  <Animated.View
     pointerEvents={pointerEvents}
     accessible={true}
     accessibilityRole="adjustable"
